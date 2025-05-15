@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermarket Mastery: Vocabulary & Concepts</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .slide {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        .slide.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .vocab-card {
+            transition: all 0.3s ease;
+        }
+        .vocab-card:hover {
+            background-color: #f0f9ff;
+        }
+        .section-indicator.active {
+            background-color: #3b82f6;
+            color: white;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <h1 class="text-xl md:text-2xl font-bold text-blue-600">Supermarket Mastery</h1>
+            <div class="flex items-center space-x-4">
+                <button id="prevBtn" class="bg-blue-100 hover:bg-blue-200 text-blue-600 p-2 rounded-full">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+                <span id="slideCounter" class="text-gray-600 font-medium">1/20</span>
+                <button id="nextBtn" class="bg-blue-100 hover:bg-blue-200 text-blue-600 p-2 rounded-full">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+        <div class="bg-blue-50 py-2 overflow-x-auto">
+            <div class="container mx-auto px-4 flex space-x-2">
+                <button class="section-indicator active px-3 py-1 rounded-full text-sm whitespace-nowrap" data-section="0">Introduction</button>
+                <button class="section-indicator px-3 py-1 rounded-full text-sm whitespace-nowrap bg-gray-100" data-section="1">Store Layout</button>
+                <button class="section-indicator px-3 py-1 rounded-full text-sm whitespace-nowrap bg-gray-100" data-section="2">Produce</button>
+                <button class="section-indicator px-3 py-1 rounded-full text-sm whitespace-nowrap bg-gray-100" data-section="3">Meat & Fish</button>
+                <button class="section-indicator px-3 py-1 rounded-full text-sm whitespace-nowrap bg-gray-100" data-section="4">Dairy & Frozen</button>
+                <button class="section-indicator px-3 py-1 rounded-full text-sm whitespace-nowrap bg-gray-100" data-section="5">Dry Goods</button>
+                <button class="section-indicator px-3 py-1 rounded-full text-sm whitespace-nowrap bg-gray-100" data-section="6">Bakery</button>
+                <button class="section-indicator px-3 py-1 rounded-full text-sm whitespace-nowrap bg-gray-100" data-section="7">Checkout</button>
+                <button class="section-indicator px-3 py-1 rounded-full text-sm whitespace-nowrap bg-gray-100" data-section="8">Staff</button>
+                <button class="section-indicator px-3 py-1 rounded-full text-sm whitespace-nowrap bg-gray-100" data-section="9">Conclusion</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Slides Container -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Slide 1: Title -->
+        <div class="slide active bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="h-48 bg-gradient-to-r from-blue-500 to-blue-600 flex items-center justify-center">
+                <div class="text-center text-white px-4">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Supermarket Mastery</h2>
+                    <p class="text-xl">Complete Vocabulary & Useful Phrases</p>
+                </div>
+            </div>
+            <div class="p-6 md:p-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">What You'll Learn:</h3>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start">
+                                <i class="fas fa-store-alt text-blue-500 mt-1 mr-3"></i>
+                                <span>All supermarket sections and their products</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-shopping-cart text-blue-500 mt-1 mr-3"></i>
+                                <span>Essential vocabulary for shopping</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-comments text-blue-500 mt-1 mr-3"></i>
+                                <span>Useful phrases for interacting with staff</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-map-marked-alt text-blue-500 mt-1 mr-3"></i>
+                                <span>Understanding store layout and navigation</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1550581190-9c1c48d21d6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Supermarket interior" class="rounded-lg shadow-md w-full max-w-md">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2: Store Layout Overview -->
+        <div class="slide bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="h-16 bg-blue-600 flex items-center px-6">
+                <h2 class="text-xl font-bold text-white">Store Layout & Sections</h2>
+            </div>
+            <div class="p-6 md:p-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-800 mb-4">Typical Supermarket Layout:</h3>
+                        <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Supermarket layout" class="rounded-lg shadow-md mb-6 w-full">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-blue-50 p-4 rounded-lg">
+                                <h4 class="font-bold text-blue-600 mb-2">Entrance Area</h4>
+                                <p class="text-sm text-gray-700">Shopping carts, baskets, promotional displays</p>
+                            </div>
+                            <div class="bg-blue-50 p-4 rounded-lg">
+                                <h4 class="font-bold text-blue-600 mb-2">Perimeter</h4>
+                                <p class="text-sm text-gray-700">Produce, meat, dairy, bakery - fresh items</p>
+                            </div>
+                            <div class="bg-blue-50 p-4 rounded-lg">
+                                <h4 class="font-bold text-blue-600 mb-2">Center Aisles</h4>
+                                <p class="text-sm text-gray-700">Packaged goods, dry foods, household items</p>
+                            </div>
+                            <div class="bg-blue-50 p-4 rounded-lg">
+                                <h4 class="font-bold text-blue-600 mb-2">Checkout Area</h4>
+                                <p class="text-sm text-gray-700">Registers, bagging area, impulse buys</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-800 mb-4">Key Vocabulary:</h3>
+                        <div class="space-y-4">
+                            <div class="vocab-card bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
+                                <div class="flex justify-between items-start">
+                                    <div>
+                                        <h4 class="font-bold text-gray-800">Aisle</h4>
+                                        <p class="text-gray-600 text-sm">A passage between shelves in a supermarket</p>
+                                    </div>
+                                    <span class="bg-blue-100 text-blue-600 px-2 py-1 rounded text-xs">/aɪl/</span>
+                                </div>
+                                <p class="mt-2 text-sm italic text-gray-700">"The pasta is in aisle 5, next to the rice."</p>
+                            </div>
+                            <div class="vocab-card bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
+                                <div class="flex justify-between items-start">
+                                    <div>
+                                        <h4 class="font-bold text-gray-800">Endcap</h4>
+                                        <p class="text-gray-600 text-sm">Display at the end of an aisle</p>
+                                    </div>
+                                    <span class="bg-blue-100 text-blue-600 px-2 py-1 rounded text-xs">/ˈɛndkæp/</span>
+                                </div>
+                                <p class="mt-2 text-sm italic text-gray-700">"Check the endcap for special deals on cereal."</p>
+                            </div>
+                            <div class="vocab-card bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
+                                <div class="flex justify-between items-start">
+                                    <div>
+                                        <h4 class="font-bold text-gray-800">Point of Sale (POS)</h4>
+                                        <p class="text-gray-600 text-sm">Checkout area where purchases are completed</p>
+                                    </div>
+                                    <span class="bg-blue-100 text-blue-600 px-2 py-1 rounded text-xs">/pɔɪnt əv seɪl/</span>
+                                </div>
+                                <p class="mt-2 text-sm italic text-gray-700">"The POS system was down, causing long lines."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Produce Section -->
+        <div class="slide bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="h-16 bg-green-600 flex items-center px-6">
+                <h2 class="text-xl font-bold text-white">Produce Section</h2>
+            </div>
+            <div class="p-6 md:p-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Produce section" class="rounded-lg shadow-md w-full mb-6">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-green-50 p-3 rounded-lg">
+                                <h4 class="font-bold text-green-700 mb-1">Fruits</h4>
+                                <p class="text-xs text-gray-700">Apples, bananas, oranges, grapes, berries, melons</p>
+                            </div>
+                            <div class="bg-green-50 p-3 rounded-lg">
+                                <h4 class="font-bold text-green-700 mb-1">Vegetables</h4>
+                                <p class="text-xs text-gray-700">Lettuce, tomatoes, carrots, peppers, onions, potatoes</p>
+                            </div>
+                            <div class="bg-green-50 p-3 rounded-lg">
+                                <h4 class="font-bold text-green-700 mb-1">Organic</h4>
+                                <p class="text-xs text-gray-700">Grown without synthetic pesticides or fertilizers</p>
+                            </div>
+                            <div class="bg-green-50 p-3 rounded-lg">
+                                <h4 class="font-bold text-green-700 mb-1">Conventional</h4>
+                                <p class="text-xs text-gray-700">Grown with standard agricultural methods</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-800 mb-4">Vocabulary & Phrases:</h3>
+                        <div class="space-y-4">
+                            <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
+                                <h4 class="font-bold text-green-700 mb-2">Ripeness Terms</h4>
+                                <ul class="text-sm space-y-2 text-gray-700">
+                                    <li><span class="font-medium">Ripe</span> - Ready to eat now</li>
+                                    <li><span class="font-medium">Underripe</span> - Needs time to mature</li>
+                                    <li><span class="font-medium">Overripe</span> - Past its prime</li>
+                                    <li><span class="font-medium">Bruised</span> - Damaged with soft spots</li>
+                                </ul>
+                            </div>
+                            <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
+                                <h4 class="font-bold text-green-700 mb-2">Useful Phrases</h4>
+                                <ul class="text-sm space-y-2 text-gray-700">
+                                    <li>"Where can I find the organic vegetables?"</li>
+                                    <li>"Do these bananas need more time to ripen?"</li>
+                                    <li>"Is this avocado ripe enough to eat today?"</li>
+                                    <li>"Could you help me pick a good melon?"</li>
+                                </ul>
+                            </div>
+                            <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
+                                <h4 class="font-bold text-green-700 mb-2">Measurement Terms</h4>
+                                <ul class="text-sm space-y-2 text-gray-700">
+                                    <li><span class="font-medium">Bunch</span> - Group of items sold together (bananas, herbs)</li>
+                                    <li><span class="font-medium">Pound/lb</span> - Unit of weight (16 ounces)</li>
+                                    <li><span class="font-medium">Each</span> - Sold individually</li>
+                                    <li><span class="font-medium">Bagged</span> - Pre-packaged in bags</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Meat & Seafood Section -->
+        <div class="slide bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="h-16 bg-red-600 flex items-center px-6">
+                <h2 class="text-xl font-bold text-white">Meat & Seafood Section</h2>
+            </div>
+            <div class="p-6 md:p-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Meat section" class="rounded-lg shadow-md w-full mb-6">
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div class="bg-red-50 p-3 rounded-lg">
+                                <h4 class="font-bold text-red-700 mb-1">Meat Types</h4>
+                                <p class="text-xs text-gray-700">Beef, pork, chicken, lamb, turkey</p>
+                            </div>
+                            <div class="bg-red-50 p-3 rounded-lg">
+                                <h4 class="font-bold text-red-700 mb-1">Seafood</h4>
+                                <p class="text-xs text-gray-700">Fish, shrimp, crab, lobster, mussels</p>
+                            </div>
+                            <div class="bg-red-50 p-3 rounded-lg">
+                                <h4 class="font-bold text-red-700 mb-1">Cuts</h4>
+                                <p class="text-xs text-gray-700">Chops, steaks, ground, whole, fillets</p>
+                            </div>
+                            <div class="bg-red-50 p-3 rounded-lg">
+                                <h4 class="font-bold text-red-700 mb-1">Preparation</h4>
+                                <p class="text-xs text-gray-700">Marinated, seasoned, stuffed, pre-cooked</p>
+                            </div>
+                        </div>
+                        <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
+                            <h4 class="font-bold text-red-700 mb-2">Quality Indicators</h4>
+                            <ul class="text-sm space-y-2 text-gray-700">
+                                <li><span class="font-medium">Marbling</span> - Fat within muscle (indicates flavor)</li>
+                                <li><span class="font-medium">Color</span> - Bright red for beef, pink for pork</li>
+                                <li><span class="font-medium">Smell</span> - Should be neutral, not sour</li>
+                                <li><span class="font-medium">Firmness</span> - Should spring back when pressed</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-800 mb-4">Vocabulary & Phrases:</h3>
+                        <div class="space-y-4">
+                            <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
+                                <h4 class="font-bold text-red-700 mb-2">Meat Terms</h4>
+                                <ul class="text-sm space-y-2 text-gray-700">
+                                    <li><span class="font-medium">Lean</span> - Low fat content</li>
+                                    <li><span class="font-medium">Free-range</span> - Animals had outdoor access</li>
+                                    <li><span class="font-medium">Grass-fed</span> - Fed primarily on grass</li>
+                                    <li><span class="font-medium">Organic</span> - Raised without antibiotics/hormones</li>
+                                </ul>
+                            </div>
+                            <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
+                                <h4 class="font-bold text-red-700 mb-2">Seafood Terms</h4>
+                                <ul class="text-sm space-y-2 text-gray-700">
+                                    <li><span class="font-medium">Fresh</span> - Never frozen</li>
+                                    <li><span class="font-medium">Previously frozen</span> - Thawed for sale</li>
+                                    <li><span class="font-medium">Wild-caught</span> - From natural habitats</li>
+                                    <li><span class="font-medium">Farm-raised</span> - Cultivated in controlled environments</li>
+                                </ul>
+                            </div>
+                            <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
+                                <h4 class="font-bold text-red-700 mb-2">Useful Phrases</h4>
+                                <ul class="text-sm space-y-2 text-gray-700">
+                                    <li>"Can I get two pounds of ground beef, please?"</li>
+                                    <li>"What's the freshest fish you have today?"</li>
+                                    <li>"Could you trim the fat off this steak for me?"</li>
+                                    <li>"Is this chicken free-range?"</li>
+                                    <li>"Do you have any salmon fillets without skin?"</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: Dairy & Frozen Section -->
+        <div class="slide bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="h-16 bg-blue-400 flex items-center px-6">
+                <h2 class="text-xl font-bold text-white">Dairy & Frozen Foods</h2>
+            </div>
+            <div class="p-6 md:p-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div>
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div>
+                                <img src="https://images.unsplash.com/photo-1550583725-4c6db1ff7350?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Dairy section" class="rounded-lg shadow-md w-full mb-2">
+                                <h4 class="font-bold text-blue-600 text-center">Dairy Products</h4>
+                            </div>
+                            <div>
+                                <img src="https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Frozen section" class="rounded-lg shadow-md w-full mb-2">
+                                <h4 class="font-bold text-blue-600 text-center">Frozen Foods</h4>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-blue-50 p-3 rounded-lg">
+                                <h4 class="font-bold text-blue-700 mb-1">Dairy Items</h4>
+                                <p class="text-xs text-gray-700">Milk, cheese, yogurt, butter, cream, eggs</p>
+                            </div>
+                            <div class="bg-blue-50 p-3 rounded-lg">
+                                <h4 class="font-bold text-blue-700 mb-1">Frozen Items</h4>
+                                <p class="text-xs text-gray-700">Vegetables, meals, pizza, desserts, seafood</p>
+                            </div>
+                            <div class="bg-blue-50 p-3 rounded-lg">
+                                <h4 class="font-bold text-blue-700 mb-1">Dairy Terms</h4>
+                                <p class="text-xs text-gray-700">Pasteurized, homogenized, cultured, fortified</p>
+                            </div>
+                            <div class="bg-blue-50 p-3 rounded-lg">
+                                <h4 class="font-bold text-blue-700 mb-1">Frozen Terms</h4>
+                                <p class="text-xs text-gray-700">Flash-frozen, IQF (individually quick frozen)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-800 mb-4">Vocabulary & Phrases:</h3>
+                        <div class="space-y-4">
+                            <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
+                                <h4 class="font-bold text-blue-600 mb-2">Dairy Vocabulary</h4>
+                                <ul class="text-sm space-y-2 text-gray-700">
+                                    <li><span class="font-medium">Lactose-free</span> - Without milk sugar</li>
+                                    <li><span class="font-medium">Whole/2%/Skim</span> - Milk fat percentages</li>
+                                    <li><span class="font-medium">Organic</span> - From cows not treated with hormones</li>
+                                    <li><span class="font-medium">Expiration date</span> - Last recommended use date</li>
+                                </ul>
+                            </div>
+                            <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
+                                <h4 class="font-bold text-blue-600 mb-2">Frozen Vocabulary</h4>
+                                <ul class="text-sm space-y-2 text-gray-700">
+                                    <li><span class="font-medium">Freezer burn</span> - Dehydration from poor packaging</li>
+                                    <li><span class="font-medium">Thawing</span> - Process of defrosting</li>
+                                    <li><span class="font-medium">Ready-to-cook</span> - Requires heating before eating</li>
+                                    <li><span class="font-medium">Microwaveable</span> - Can be heated in microwave</li>
+                                </ul>
+                            </div>
+                            <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
+                                <h4 class="font-bold text-blue-600 mb-2">Useful Phrases</h4>
+                                <ul class="text-sm space-y-2 text-gray-700">
+                                    <li>"Do you have this cheese in a smaller size?"</li>
+                                    <li>"Where can I find lactose-free milk?"</li>
+                                    <li>"Is this frozen meal suitable for vegetarians?"</li>
+                                    <li>"How long can I keep this frozen pizza before cooking?"</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: Dry Goods & Packaged Foods -->
+        <div class="slide bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="h-16 bg-amber-600 flex items-center px-6">
+                <h2 class="text-xl font-bold text-white">Dry Goods & Packaged Foods</h2>
+            </div>
+            <div class="p-6 md:p-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1550583725-4c6db1ff7350?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Dry goods aisle" class="rounded-lg shadow-md w-full mb-6">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-amber-50 p-3 rounded-lg">
+                                <h4 class="font-bold text-amber-700 mb-1">Grains & Pasta</h4>
+                                <p class="text-xs text-gray-700">Rice, pasta, quinoa, oats, cereal</p>
+                            </div>
+                            <div class="bg-amber-50 p-3 rounded-lg">
+                                <h4 class="font-bold text-amber-700 mb-1">Canned Goods</h4>
+                                <p class="text-xs text-gray-700">Vegetables, fruits, beans, soups, meats</p>
+                            </div>
+                            <div class="bg-amber-50 p-3 rounded-lg">
+                                <h4 class="font-bold text-amber-700 mb-1">Snacks</h4>
+                                <p class="text-xs text-gray-700">Chips, crackers, nuts, cookies, candy</p>
+                            </div>
+                            <div class="bg-amber-50 p-3 rounded-lg">
+                                <h4 class="font-bold text-amber-700 mb-1">Baking</h4>
+                                <p class="text-xs text-gray-700">Flour, sugar, spices, oils, mixes</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-800 mb-4">Vocabulary & Phrases:</h3>
+                        <div class="space-y-4">
+                            <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
+                                <h4 class="font-bold text-amber-600 mb-2">Packaging Terms</h4>
+                                <ul class="text-sm space-y-2 text-gray-700">
+                                    <li><span class="font-medium">Bulk</span> - Sold loose or in large quantities</li>
+                                    <li><span class="font-medium">Family size</span> - Larger economical packaging</li>
+                                    <li><span class="font-medium">Single-serve</span> - Individual portion</li>
+                                    <li><span class="font-medium">Resealable</span> - Can be closed after opening</li>
+                                </ul>
+                            </div>
+                            <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
+                                <h4 class="font-bold text-amber-600 mb-2">Label Terms</h4>
+                                <ul class="text-sm space-y-2 text-gray-700">
+                                    <li><span class="font-medium">Best before</span> - Quality date (not safety)</li>
+                                    <li><span class="font-medium">Use by</span> - Last recommended use date</li>
+                                    <li><span class="font-medium">Net weight</span> - Product weight without packaging</li>
+                                    <li><span class="font-medium">Ingredients</span> - List of what's in the product</li>
+                                </ul>
+                            </div>
+                            <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
+                                <h4 class="font-bold text-amber-600 mb-2">Useful Phrases</h4>
+                                <ul class="text-sm space-y-2 text-gray-700">
+                                    <li>"Is this cereal available in a bulk size?"</li>
+                                    <li>"Do you carry organic canned tomatoes?"</li>
+                                    <li>"Where can I find gluten-free pasta?"</li>
+                                    <li>"What's the difference between these two brands of rice?"</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7: Bakery Section -->
+        <div class="slide bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="h-16 bg-yellow-500 flex items-center px-6">
+                <h2 class="text-xl font-bold text-white">Bakery Section</h2>
+            </div>
+            <div class="p-6 md:p-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Bakery section" class="rounded-lg shadow-md w-full mb-6">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-yellow-50 p-3 rounded-lg">
+                                <h4 class="font-bold text-yellow-700 mb-1">Bread Types</h4>
+                                <p class="text-xs text-gray-700">White, whole wheat, sourdough, rye, baguette</p>
+                            </div>
+                            <div class="bg-yellow-50 p-3 rounded-lg">
+                                <h4 class="font-bold text-yellow-700 mb-1">Pastries</h4>
+                                <p class="text-xs text-gray-700">Croissants, muffins, donuts, danishes</p>
+                            </div>
+                            <div class="bg-yellow-50 p-3 rounded-lg">
+                                <h4 class="font-bold text-yellow-700 mb-1">Desserts</h4>
+                                <p class="text-xs text-gray-700">Cakes, pies, cookies, cupcakes</p>
+                            </div>
+                            <div class="bg-yellow-50 p-3 rounded-lg">
+                                <h4 class="font-bold text-yellow-700 mb-1">Specialty</h4>
+                                <p class="text-xs text-gray-700">Gluten-free, vegan, organic, artisan</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-800 mb-4">Vocabulary & Phrases:</h3>
+                        <div class="space-y-4">
+                            <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
+                                <h4 class="font-bold text-yellow-600 mb-2">Bakery Terms</h4>
+                                <ul class="text-sm space-y-2 text-gray-700">
+                                    <li><span class="font-medium">Fresh-baked</span> - Made that day</li>
+                                    <li><span class="font-medium">Day-old</span> - Yesterday's baked goods at discount</li>
+                                    <li><span class="font-medium">Artisan</span> - Handcrafted in small batches</li>
+                                    <li><span class="font-medium">Par-baked</span> - Partially baked, finish at home</li>
+                                </ul>
+                            </div>
+                            <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
+                                <h4 class="font-bold text-yellow-600 mb-2">Texture Terms</h4>
+                                <ul class="text-sm space-y-2 text-gray-700">
+                                    <li><span class="font-medium">Crusty</span> - Hard outer layer</li>
+                                    <li><span class="font-medium">Chewy</span> - Requires some biting</li>
+                                    <li><span class="font-medium">Flaky</span> - Layers that separate easily</li>
+                                    <li><span class="font-medium">Soft</span> - Light and tender</li>
+                                </ul>
+                            </div>
+                            <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
+                                <h4 class="font-bold text-yellow-600 mb-2">Useful Phrases</h4>
+                                <ul class="text-sm space-y-2 text-gray-700">
+                                    <li>"When was this bread baked?"</li>
+                                    <li>"Do you have any whole grain options?"</li>
+                                    <li>"Can you slice this loaf for me?"</li>
+                                    <li>"What's in your fresh-baked cookies?"</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 8: Checkout Process -->
+        <div class="slide bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="h-16 bg-purple-600 flex items-center px-6">
+                <h2 class="text-xl font-bold text-white">Checkout Process</h2>
+            </div>
+            <div class="p-6 md:p-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1600880292203-75707162d9ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Checkout area" class="rounded-lg shadow-md w-full mb-6">
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div class="bg-purple-50 p-3 rounded-lg">
+                                <h4 class="font-bold text-purple-700 mb-1">Checkout Types</h4>
+                                <p class="text-xs text-gray-700">Staffed, self-checkout, express lanes</p>
+                            </div>
+                            <div class="bg-purple-50 p-3 rounded-lg">
+                                <h4 class="font-bold text-purple-700 mb-1">Payment Methods</h4>
+                                <p class="text-xs text-gray-700">Cash, card, mobile pay, store credit</p>
+                            </div>
+                        </div>
+                        <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
+                            <h4 class="font-bold text-purple-700 mb-2">Checkout Steps</h4>
+                            <ol class="text-sm space-y-2 text-gray-700 list-decimal pl-5">
+                                <li>Place items on conveyor belt</li>
+                                <li>Items are scanned and bagged</li>
+                                <li>Cashier announces total</li>
+                                <li>Payment is processed</li>
+                                <li>Receipt is provided</li>
+                                <li>Items are taken to car/home</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-800 mb-4">Vocabulary & Phrases:</h3>
+                        <div class="space-y-4">
+                            <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
+                                <h4 class="font-bold text-purple-600 mb-2">Checkout Terms</h4>
+                                <ul class="text-sm space-y-2 text-gray-700">
+                                    <li><span class="font-medium">Conveyor belt</span> - Moves items to cashier</li>
+                                    <li><span class="font-medium">Scanner</span> - Reads barcodes</li>
+                                    <li><span class="font-medium">Bagging area</span> - Where packed items go</li>
+                                    <li><span class="font-medium">PIN pad</span> - For entering payment details</li>
+                                </ul>
+                            </div>
+                            <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
+                                <h4 class="font-bold text-purple-600 mb-2">Payment Terms</h4>
+                                <ul class="text-sm space-y-2 text-gray-700">
+                                    <li><span class="font-medium">Cash back</span> - Get money with purchase</li>
+                                    <li><span class="font-medium">Split payment</span> - Pay with multiple methods</li>
+                                    <li><span class="font-medium">Contactless</span> - Tap to pay without insertion</li>
+                                    <li><span class="font-medium">Receipt</span> - Proof of purchase</li>
+                                </ul>
+                            </div>
+                            <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
+                                <h4 class="font-bold text-purple-600 mb-2">Useful Phrases</h4>
+                                <ul class="text-sm space-y-2 text-gray-700">
+                                    <li>"Paper or plastic bags?"</li>
+                                    <li>"Could I get $20 cash back, please?"</li>
+                                    <li>"I'd like to split the payment between two cards."</li>
+                                    <li>"Could I have a receipt, please?"</li>
+                                    <li>"This item was on sale for $3.99."</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 9: Supermarket Staff -->
+        <div class="slide bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="h-16 bg-gray-600 flex items-center px-6">
+                <h2 class="text-xl font-bold text-white">Supermarket Staff</h2>
+            </div>
+            <div class="p-6 md:p-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Supermarket staff" class="rounded-lg shadow-md w-full mb-6">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-gray-50 p-3 rounded-lg">
+                                <h4 class="font-bold text-gray-700 mb-1">Store Roles</h4>
+                                <p class="text-xs text-gray-700">Manager, cashier, stocker, butcher, baker</p>
+                            </div>
+                            <div class="bg-gray-50 p-3 rounded-lg">
+                                <h4 class="font-bold text-gray-700 mb-1">Specialists</h4>
+                                <p class="text-xs text-gray-700">Deli clerk, seafood expert, wine consultant</p>
+                            </div>
+                            <div class="bg-gray-50 p-3 rounded-lg">
+                                <h4 class="font-bold text-gray-700 mb-1">Support Staff</h4>
+                                <p class="text-xs text-gray-700">Janitor, security, customer service</p>
+                            </div>
+                            <div class="bg-gray-50 p-3 rounded-lg">
+                                <h4 class="font-bold text-gray-700 mb-1">Other</h4>
+                                <p class="text-xs text-gray-700">Sample givers, demonstrators, baggers</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-800 mb-4">Vocabulary & Phrases:</h3>
+                        <div class="space-y-4">
+                            <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
+                                <h4 class="font-bold text-gray-600 mb-2">Staff Terms</h4>
+                                <ul class="text-sm space-y-2 text-gray-700">
+                                    <li><span class="font-medium">Associate</span> - General employee</li>
+                                    <li><span class="font-medium">Department head</span> - Section manager</li>
+                                    <li><span class="font-medium">Shift leader</span> - Supervisor for a work period</li>
+                                    <li><span class="font-medium">Courtesy clerk</span> - Helps with bagging and carts</li>
+                                </ul>
+                            </div>
+                            <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
+                                <h4 class="font-bold text-gray-600 mb-2">Helpful Phrases</h4>
+                                <ul class="text-sm space-y-2 text-gray-700">
+                                    <li>"Excuse me, could you help me find...?"</li>
+                                    <li>"Is there someone who can advise me about wine pairings?"</li>
+                                    <li>"Could you check in the back for more of this item?"</li>
+                                    <li>"Who should I speak to about a special order?"</li>
+                                </ul>
+                            </div>
+                            <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
+                                <h4 class="font-bold text-gray-600 mb-2">Customer Service</h4>
+                                <ul class="text-sm space-y-2 text-gray-700">
+                                    <li>"Where is the customer service desk?"</li>
+                                    <li>"I'd like to speak with a manager, please."</li>
+                                    <li>"This item rang up at the wrong price."</li>
+                                    <li>"Do you have a loyalty program?"</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 10: Conclusion -->
+        <div class="slide bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="h-16 bg-blue-600 flex items-center px-6">
+                <h2 class="text-xl font-bold text-white">Conclusion & Review</h2>
+            </div>
+            <div class="p-6 md:p-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-800 mb-4">Key Takeaways:</h3>
+                        <ul class="space-y-4 text-gray-700">
+                            <li class="flex items-start">
+                                <div class="bg-blue-100 text-blue-600 rounded-full p-2 mr-3">
+                                    <i class="fas fa-store text-sm"></i>
+                                </div>
+                                <span>Supermarkets are organized into logical sections for efficient shopping</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="bg-blue-100 text-blue-600 rounded-full p-2 mr-3">
+                                    <i class="fas fa-tags text-sm"></i>
+                                </div>
+                                <span>Understanding product labels and pricing helps make better choices</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="bg-blue-100 text-blue-600 rounded-full p-2 mr-3">
+                                    <i class="fas fa-utensils text-sm"></i>
+                                </div>
+                                <span>Each department has specific vocabulary for products and preparation</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="bg-blue-100 text-blue-600 rounded-full p-2 mr-3">
+                                    <i class="fas fa-comments text-sm"></i>
+                                </div>
+                                <span>Polite phrases help when interacting with staff or asking for assistance</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="bg-blue-100 text-blue-600 rounded-full p-2 mr-3">
+                                    <i class="fas fa-receipt text-sm"></i>
+                                </div>
+                                <span>The checkout process has its own set of terms and common exchanges</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-800 mb-4">Practice Exercise:</h3>
+                        <div class="bg-blue-50 rounded-lg p-6">
+                            <h4 class="font-bold text-blue-600 mb-3">Scenario:</h4>
+                            <p class="text-gray-700 mb-4">You're shopping for ingredients to make spaghetti bolognese. Create a shopping list and identify which supermarket sections you'd visit:</p>
+                            
+                            <div class="bg-white rounded-lg p-4 shadow-inner">
+                                <div class="mb-3">
+                                    <label class="block text-gray-700 mb-2">Shopping List:</label>
+                                    <textarea class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" rows="3" placeholder="Ground beef, tomatoes..."></textarea>
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 mb-2">Departments to Visit:</label>
+                                    <div class="grid grid-cols-2 gap-2">
+                                        <label class="flex items-center">
+                                            <input type="checkbox" class="mr-2"> Produce
+                                        </label>
+                                        <label class="flex items-center">
+                                            <input type="checkbox" class="mr-2"> Meat
+                                        </label>
+                                        <label class="flex items-center">
+                                            <input type="checkbox" class="mr-2"> Dairy
+                                        </label>
+                                        <label class="flex items-center">
+                                            <input type="checkbox" class="mr-2"> Dry Goods
+                                        </label>
+                                        <label class="flex items-center">
+                                            <input type="checkbox" class="mr-2"> Frozen
+                                        </label>
+                                        <label class="flex items-center">
+                                            <input type="checkbox" class="mr-2"> Bakery
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300">
+                                Check Answers <i class="fas fa-check ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Slide management
+        const slides = document.querySelectorAll('.slide');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const slideCounter = document.getElementById('slideCounter');
+        const sectionIndicators = document.querySelectorAll('.section-indicator');
+        
+        let currentSlide = 0;
+        
+        // Show first slide
+        showSlide(currentSlide);
+        
+        // Navigation functions
+        function showSlide(n) {
+            // Hide all slides
+            slides.forEach(slide => {
+                slide.classList.remove('active');
+            });
+            
+            // Show current slide
+            slides[n].classList.add('active');
+            
+            // Update counter
+            slideCounter.textContent = `${n + 1}/${slides.length}`;
+            
+            // Update section indicators
+            updateSectionIndicators(n);
+            
+            // Disable/enable navigation buttons
+            prevBtn.disabled = n === 0;
+            nextBtn.disabled = n === slides.length - 1;
+        }
+        
+        function updateSectionIndicators(n) {
+            // Determine which section we're in
+            let currentSection = 0;
+            if (n >= 1 && n <= 1) currentSection = 1; // Store Layout
+            else if (n >= 2 && n <= 2) currentSection = 2; // Produce
+            else if (n >= 3 && n <= 3) currentSection = 3; // Meat & Fish
+            else if (n >= 4 && n <= 4) currentSection = 4; // Dairy & Frozen
+            else if (n >= 5 && n <= 5) currentSection = 5; // Dry Goods
+            else if (n >= 6 && n <= 6) currentSection = 6; // Bakery
+            else if (n >= 7 && n <= 7) currentSection = 7; // Checkout
+            else if (n >= 8 && n <= 8) currentSection = 8; // Staff
+            else if (n >= 9 && n <= 9) currentSection = 9; // Conclusion
+            
+            // Update indicators
+            sectionIndicators.forEach(indicator => {
+                indicator.classList.remove('active', 'bg-blue-600', 'text-white');
+                indicator.classList.add('bg-gray-100');
+                
+                if (parseInt(indicator.dataset.section) === currentSection) {
+                    indicator.classList.add('active', 'bg-blue-600', 'text-white');
+                    indicator.classList.remove('bg-gray-100');
+                }
+            });
+        }
+        
+        // Event listeners
+        prevBtn.addEventListener('click', () => {
+            if (currentSlide > 0) {
+                currentSlide--;
+                showSlide(currentSlide);
+            }
+        });
+        
+        nextBtn.addEventListener('click', () => {
+            if (currentSlide < slides.length - 1) {
+                currentSlide++;
+                showSlide(currentSlide);
+            }
+        });
+        
+        // Section indicator clicks
+        sectionIndicators.forEach(indicator => {
+            indicator.addEventListener('click', function() {
+                const section = parseInt(this.dataset.section);
+                
+                // Map sections to slide numbers
+                const sectionMap = {
+                    0: 0,   // Introduction
+                    1: 1,   // Store Layout
+                    2: 2,   // Produce
+                    3: 3,   // Meat & Fish
+                    4: 4,   // Dairy & Frozen
+                    5: 5,   // Dry Goods
+                    6: 6,   // Bakery
+                    7: 7,   // Checkout
+                    8: 8,   // Staff
+                    9: 9    // Conclusion
+                };
+                
+                currentSlide = sectionMap[section];
+                showSlide(currentSlide);
+            });
+        });
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowLeft') {
+                prevBtn.click();
+            } else if (e.key === 'ArrowRight') {
+                nextBtn.click();
+            }
+        });
+    </script>
+</body>
+</html>

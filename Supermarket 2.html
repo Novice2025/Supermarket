@@ -1,0 +1,479 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermarket English Guide for ESL Learners</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .section-title {
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+        }
+        .language-card {
+            transition: all 0.3s ease;
+        }
+        .language-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .dialogue-customer {
+            border-left: 4px solid #3b82f6;
+        }
+        .dialogue-clerk {
+            border-left: 4px solid #10b981;
+        }
+        .print-btn:hover {
+            background: linear-gradient(90deg, #10b981, #3b82f6);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <div class="container mx-auto px-4 py-8 max-w-6xl">
+        <!-- Header -->
+        <header class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-blue-600 mb-2">
+                <i class="fas fa-shopping-cart mr-2"></i>
+                Supermarket English Guide
+            </h1>
+            <p class="text-lg text-gray-600">Essential vocabulary and phrases for ESL learners</p>
+            
+            <button onclick="window.print()" class="print-btn mt-6 px-6 py-2 bg-gradient-to-r from-blue-500 to-green-500 text-white rounded-full font-medium shadow-md hover:shadow-lg transition-all duration-300">
+                <i class="fas fa-print mr-2"></i>Print This Handout
+            </button>
+        </header>
+
+        <!-- Supermarket Departments -->
+        <section class="mb-16">
+            <div class="section-title rounded-lg px-6 py-3 mb-6 text-white flex items-center">
+                <i class="fas fa-store-alt text-2xl mr-3"></i>
+                <h2 class="text-2xl font-bold">Supermarket Departments</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="language-card bg-white p-4 rounded-lg shadow-md">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-semibold text-blue-600">Produce Section</span>
+                        <span class="text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded">Hortifruti</span>
+                    </div>
+                </div>
+                
+                <div class="language-card bg-white p-4 rounded-lg shadow-md">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-semibold text-blue-600">Bakery</span>
+                        <span class="text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded">Padaria</span>
+                    </div>
+                </div>
+                
+                <div class="language-card bg-white p-4 rounded-lg shadow-md">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-semibold text-blue-600">Deli Counter</span>
+                        <span class="text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded">Açougue / Fiambreria</span>
+                    </div>
+                </div>
+                
+                <div class="language-card bg-white p-4 rounded-lg shadow-md">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-semibold text-blue-600">Dairy Section</span>
+                        <span class="text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded">Laticínios</span>
+                    </div>
+                </div>
+                
+                <div class="language-card bg-white p-4 rounded-lg shadow-md">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-semibold text-blue-600">Meat Section</span>
+                        <span class="text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded">Seção de Carnes</span>
+                    </div>
+                </div>
+                
+                <div class="language-card bg-white p-4 rounded-lg shadow-md">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-semibold text-blue-600">Frozen Foods</span>
+                        <span class="text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded">Congelados</span>
+                    </div>
+                </div>
+                
+                <div class="language-card bg-white p-4 rounded-lg shadow-md">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-semibold text-blue-600">Seafood Counter</span>
+                        <span class="text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded">Peixes e frutos do mar</span>
+                    </div>
+                </div>
+                
+                <div class="language-card bg-white p-4 rounded-lg shadow-md">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-semibold text-blue-600">Bulk Section</span>
+                        <span class="text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded">Granel</span>
+                    </div>
+                </div>
+                
+                <div class="language-card bg-white p-4 rounded-lg shadow-md">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-semibold text-blue-600">Household/Cleaning</span>
+                        <span class="text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded">Limpeza doméstica</span>
+                    </div>
+                </div>
+                
+                <div class="language-card bg-white p-4 rounded-lg shadow-md">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-semibold text-blue-600">Beverages</span>
+                        <span class="text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded">Bebidas</span>
+                    </div>
+                </div>
+                
+                <div class="language-card bg-white p-4 rounded-lg shadow-md">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-semibold text-blue-600">Snacks & Junk Food</span>
+                        <span class="text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded">Lanches e guloseimas</span>
+                    </div>
+                </div>
+                
+                <div class="language-card bg-white p-4 rounded-lg shadow-md">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-semibold text-blue-600">Baby Care</span>
+                        <span class="text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded">Bebês e fraldas</span>
+                    </div>
+                </div>
+                
+                <div class="language-card bg-white p-4 rounded-lg shadow-md">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-semibold text-blue-600">Health & Beauty</span>
+                        <span class="text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded">Higiene e beleza</span>
+                    </div>
+                </div>
+                
+                <div class="language-card bg-white p-4 rounded-lg shadow-md">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-semibold text-blue-600">International Foods</span>
+                        <span class="text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded">Produtos Importados</span>
+                    </div>
+                </div>
+                
+                <div class="language-card bg-white p-4 rounded-lg shadow-md">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-semibold text-blue-600">Check-out Area</span>
+                        <span class="text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded">Caixa</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Types & Forms -->
+        <section class="mb-16">
+            <div class="section-title rounded-lg px-6 py-3 mb-6 text-white flex items-center">
+                <i class="fas fa-tags text-2xl mr-3"></i>
+                <h2 class="text-2xl font-bold">Product Types & Forms</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="language-card bg-white p-4 rounded-lg shadow-md">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-semibold text-purple-600">Fresh</span>
+                        <span class="text-sm bg-purple-100 text-purple-800 px-2 py-1 rounded">Fresco</span>
+                    </div>
+                </div>
+                
+                <div class="language-card bg-white p-4 rounded-lg shadow-md">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-semibold text-purple-600">Frozen</span>
+                        <span class="text-sm bg-purple-100 text-purple-800 px-2 py-1 rounded">Congelado</span>
+                    </div>
+                </div>
+                
+                <div class="language-card bg-white p-4 rounded-lg shadow-md">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-semibold text-purple-600">Pre-packaged</span>
+                        <span class="text-sm bg-purple-100 text-purple-800 px-2 py-1 rounded">Embalado</span>
+                    </div>
+                </div>
+                
+                <div class="language-card bg-white p-4 rounded-lg shadow-md">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-semibold text-purple-600">Loose</span>
+                        <span class="text-sm bg-purple-100 text-purple-800 px-2 py-1 rounded">A granel / avulso</span>
+                    </div>
+                </div>
+                
+                <div class="language-card bg-white p-4 rounded-lg shadow-md">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-semibold text-purple-600">Bagged</span>
+                        <span class="text-sm bg-purple-100 text-purple-800 px-2 py-1 rounded">Em sacos</span>
+                    </div>
+                </div>
+                
+                <div class="language-card bg-white p-4 rounded-lg shadow-md">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-semibold text-purple-600">Canned</span>
+                        <span class="text-sm bg-purple-100 text-purple-800 px-2 py-1 rounded">Enlatado</span>
+                    </div>
+                </div>
+                
+                <div class="language-card bg-white p-4 rounded-lg shadow-md">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-semibold text-purple-600">Organic</span>
+                        <span class="text-sm bg-purple-100 text-purple-800 px-2 py-1 rounded">Orgânico</span>
+                    </div>
+                </div>
+                
+                <div class="language-card bg-white p-4 rounded-lg shadow-md">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-semibold text-purple-600">Locally made</span>
+                        <span class="text-sm bg-purple-100 text-purple-800 px-2 py-1 rounded">Produzido localmente</span>
+                    </div>
+                </div>
+                
+                <div class="language-card bg-white p-4 rounded-lg shadow-md">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-semibold text-purple-600">Grass-fed (milk/meat)</span>
+                        <span class="text-sm bg-purple-100 text-purple-800 px-2 py-1 rounded">Alimentado com pasto</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Functional Phrases -->
+        <section class="mb-16">
+            <div class="section-title rounded-lg px-6 py-3 mb-6 text-white flex items-center">
+                <i class="fas fa-comments text-2xl mr-3"></i>
+                <h2 class="text-2xl font-bold">Functional Phrases Inside the Supermarket</h2>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">English Expression</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Português</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Where can I find the…?</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Onde posso encontrar o…?</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Do you have any…?</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Você tem…?</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">I'm looking for…</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Estou procurando…</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Can I help you?</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Posso te ajudar?</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">How much is this?</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Quanto custa isso?</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Is this on sale?</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Está em promoção?</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">That's a good deal.</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Está valendo a pena / É um bom preço.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">I'd like 500g of…</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Gostaria de 500g de…</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">I'll take two, please.</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Vou levar dois, por favor.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Can I pay by card?</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Posso pagar com cartão?</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Paper or plastic?</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Sacola de papel ou plástico?</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">I brought my own bag.</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Eu trouxe minha própria sacola.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Do you have a loyalty card?</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Você tem o cartão fidelidade?</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">I forgot mine. Can I use my phone number?</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Esqueci o meu. Posso usar meu telefone?</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Regional Differences -->
+        <section class="mb-16">
+            <div class="section-title rounded-lg px-6 py-3 mb-6 text-white flex items-center">
+                <i class="fas fa-globe-americas text-2xl mr-3"></i>
+                <h2 class="text-2xl font-bold">Regional Differences</h2>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Item</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">USA 🇺🇸</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">UK 🇬🇧</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">France 🇫🇷</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Cart</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Cart / Buggy</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Trolley</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Chariot</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Grocery store</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Grocery store</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Supermarket</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Supermarché</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Liquor store</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Liquor store (separate)</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Off-license / bottle shop</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Cave / magasin d'alcool</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Discount card</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Loyalty card</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Clubcard / Points Card</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Carte de fidélité</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Self-checkout</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Self-checkout</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Self-service checkout</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Caisse automatique</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Bag types</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Plastic/Paper</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Carrier bags</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Sacs plastiques ou papier</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Role Play Dialogue -->
+        <section class="mb-16">
+            <div class="section-title rounded-lg px-6 py-3 mb-6 text-white flex items-center">
+                <i class="fas fa-theater-masks text-2xl mr-3"></i>
+                <h2 class="text-2xl font-bold">Role Play Dialogue: Customer & Clerk</h2>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <div class="mb-4">
+                    <div class="dialogue-customer bg-blue-50 p-4 rounded-r-lg mb-2">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-sm font-medium text-gray-900">Customer</p>
+                                <p class="text-sm text-gray-600">Excuse me, where can I find the yogurt?</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="dialogue-clerk bg-green-50 p-4 rounded-r-lg mb-2">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-green-100 flex items-center justify-center text-green-600">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-sm font-medium text-gray-900">Clerk</p>
+                                <p class="text-sm text-gray-600">It's in the dairy section, aisle 7.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="dialogue-customer bg-blue-50 p-4 rounded-r-lg mb-2">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-sm font-medium text-gray-900">Customer</p>
+                                <p class="text-sm text-gray-600">Thank you. And do you have any organic options?</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="dialogue-clerk bg-green-50 p-4 rounded-r-lg mb-2">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-green-100 flex items-center justify-center text-green-600">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-sm font-medium text-gray-900">Clerk</p>
+                                <p class="text-sm text-gray-600">Yes, right next to the flavored ones.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="dialogue-customer bg-blue-50 p-4 rounded-r-lg mb-2">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-sm font-medium text-gray-900">Customer</p>
+                                <p class="text-sm text-gray-600">Great, I'll take two. Also, do you have a loyalty card?</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="dialogue-clerk bg-green-50 p-4 rounded-r-lg">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-green-100 flex items-center justify-center text-green-600">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-sm font-medium text-gray-900">Clerk</p>
+                                <p class="text-sm text-gray-600">Yes! Just scan it at checkout to get your discount.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-6 bg-yellow-50 border-l-4 border-yellow-400 p-4">
+                    <div class="flex">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-lightbulb text-yellow-400"></i>
+                        </div>
+                        <div class="ml-3">
+                            <p class="text-sm text-yellow-700">
+                                <span class="font-bold">Practice Tip:</span> Try this dialogue with a partner, switching roles. Then create your own variations using different products from the vocabulary lists above.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center text-gray-500 text-sm mt-12 pt-6 border-t border-gray-200">
+            <p>Supermarket English Guide for ESL Learners - Printable Handout</p>
+            <p class="mt-1">© <span id="year"></span> English Learning Resources</p>
+        </footer>
+    </div>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
